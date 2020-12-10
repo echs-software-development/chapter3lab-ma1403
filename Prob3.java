@@ -3,12 +3,14 @@ import java.util.Scanner;
 public class Prob3 {
   public static void main(String[] args) {
     
-    
+    Scanner scan= new Scanner(System.in);
     // Prompt the user to enter weight in pounds
-    
-    
-    // Prompt the user to enter height in inches
+    System.out.println("Enter weight in pounds: ");
+    int weight= scan.nextInt();
 
+    // Prompt the user to enter height in inches
+    System.out.println("Enter height ");
+    int height= scan.nextInt();
 
     
     //Constant
@@ -21,6 +23,20 @@ public class Prob3 {
     double BMI = weightInKilograms/(heightInMeters * heightInMeters);
 
     // Display result using if, else if and else
-   
+   if (BMI <18.5)
+   {
+     System.out.println("Underweight");
+   }
+   else if(BMI > 18.5 || BMI < 25.0)
+  {
+    System.out.println("Normal");
+  }
+   else if(BMI < 25.0 || BMI > 30.0)
+  {
+    System.out.println("Overweight");
+  }
+  else{
+    System.out.println("Obese");
+  }
   }
 }
